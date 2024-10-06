@@ -45,12 +45,12 @@
 ## Outcome of Different Variations of The Implementations
 
 ### Vanilla Model
-- **Loss**: 0.7812
-- **Accuracy**: 0.6387
+- **Loss**: 1.8906
+- **Accuracy**: 0.599
 
 **Observations**:
  
-The vanilla model demonstrated a moderate performance with a loss of 0.7812 and an accuracy of approximately 63.9%.
+The vanilla model demonstrated a moderate performance with a loss of 1.8906 and an accuracy of approximately 59.9%.
 Given the loss is relatively high, this model may not be capturing the complexity of the data well, indicating potential **UNDERFITTING**.
 
 ### L1 Regularization Model
