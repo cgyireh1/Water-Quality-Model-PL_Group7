@@ -80,7 +80,7 @@ showing that the L2 regularization effectively reduces overfitting by penalizing
 maintaining a better balance in the model's complexity.
   
 
-### Comparing All The Models
+## Comparing All The Models
 - **Accuracy Comparison**:
 
 ***Vanilla Model:*** 63.87%
