@@ -22,7 +22,7 @@
 - The dataset was divided into training (80%) and testing (20%) sets.
 
 ### Model Architecture
-- A simple feedforward neural network was constructed using Keras.
+- A neural network was constructed using Keras.
 - Three variations of the model were created:
   1. Vanilla Model (no regularization)
   2. L1 Regularization Model
