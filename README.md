@@ -40,7 +40,7 @@
 
 ### Model Evaluation
 - Models were evaluated using loss and accuracy metrics on the testing set.
-- Confusion matrices and classification reports were generated for deeper insights.
+- Confusion matrices and classification reports were generated for insights.
 
 ## Outcome of Different Variations of The Implementations
 
