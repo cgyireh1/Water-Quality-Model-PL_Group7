@@ -107,9 +107,3 @@ suggesting it had the best fit among the three models.
 
 The L2 Regularization Model performed the best with the lowest loss and highest accuracy 0.6301 and 0.6662 respectively.
 
-**Possible Reasons;**
-
-The L2 regularization's ability to penalize large weights which likely helped the model generalize better to unseen data.
-
-The L1 regularization model, while helping with some overfitting, may have overly simplified the model, leading to a drop in accuracy.
-
