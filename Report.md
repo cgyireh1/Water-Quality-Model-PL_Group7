@@ -56,9 +56,6 @@ Given the loss is relatively high, this model may not be capturing the complexit
 ### L1 Regularization Model
 - **Loss**: 0.6640
 - **Accuracy**: 0.6281
-- **Confusion Matrix**: 
-
-- **Classification Report**: 
 
 
 **Observations**:
@@ -69,9 +66,6 @@ However, the accuracy decreased slightly, indicating that while the model is les
 ### L2 Regularization Model
 - **Loss**: 0.6301
 - **Accuracy**: 0.6662
-- **Confusion Matrix**: 
-
-- **Classification Report**: 
 
 - **Observations**:
 
@@ -105,16 +99,8 @@ indicating that it was the most effective in capturing the underlying patterns i
   
 **Observation:** 
 
-The L2 regularization model also achieved the lowest loss, 
-suggesting it had the best fit among the three models.
+
 
 
 ## **Conclusion**:
 
-The L2 Regularization Model performed the best with the lowest loss and highest accuracy 0.6301 and 0.6662 respectively.
-
-**Possible Reasons;**
-
-The L2 regularization's ability to penalize large weights which likely helped the model generalize better to unseen data.
-
-The L1 regularization model, while helping with some overfitting, may have overly simplified the model, leading to a drop in accuracy.
