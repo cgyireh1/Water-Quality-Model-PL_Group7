@@ -89,11 +89,16 @@ df['Trihalomethanes'] = df['Trihalomethanes'].fillna(df['Trihalomethanes'].mean(
 ![Screenshot from 2024-10-07 11-53-39](https://github.com/user-attachments/assets/92a8ee38-3b17-491d-b51f-ae5918186277)
 
   2. L1 Regularization Model and Adam
-     ![Screenshot from 2024-10-07 11-57-24](https://github.com/user-attachments/assets/eaa930c8-292f-4250-bfdd-bdadcd9a4ede)
+     
+![Screenshot from 2024-10-07 11-57-24](https://github.com/user-attachments/assets/eaa930c8-292f-4250-bfdd-bdadcd9a4ede)
+
   4. Plain Model with RMSprop
-    ![Screenshot from 2024-10-07 11-54-26](https://github.com/user-attachments/assets/a6c4f8e3-51e3-4d89-8429-b01a4652b811)
+
+![Screenshot from 2024-10-07 11-54-26](https://github.com/user-attachments/assets/a6c4f8e3-51e3-4d89-8429-b01a4652b811)
+
   5. L2 Regularization Model with Dropout
-     ![Screenshot from 2024-10-07 11-58-01](https://github.com/user-attachments/assets/92987c8b-09b3-4cc1-8220-2400f282e038)
+     
+![Screenshot from 2024-10-07 11-58-01](https://github.com/user-attachments/assets/92987c8b-09b3-4cc1-8220-2400f282e038)
 
 ### Regularization Techniques
 - L1 and L2 regularization were implemented in their respective models to prevent overfitting.
@@ -116,7 +121,7 @@ The models exhibited varying degrees of performance. The Vanilla Model demonstra
 - **Vanilla Model**: 64.4%
 - **L1 Regularization Model**: 62.8%
 - **Dropout Model**: 67.0%
-- **RMSprop Model**: 69.8%
+- **RMSprop Model**: 69.5%
 - **L1 Regularization with RMSprop**: 62.8%
 - **L2 Regularization with Dropout**: 62.8%
 
@@ -126,11 +131,11 @@ The Dropout Model achieved the highest accuracy, closely followed by the RMSprop
 - **Vanilla Model**: 5.57
 - **L1 Regularization Model**: 0.6611
 - **Dropout Model**: 0.5959
-- **RMSprop Model**: 0.5979
+- **RMSprop Model**: 0.596
 - **L1 Regularization with RMSprop**: 0.6723
 - **L2 Regularization with Dropout**: 0.6610
 
 The Dropout Model had the lowest loss, indicating effective learning and generalization. The Vanilla Model's high loss reflects poor performance and potential overfitting.
 
 ## Conclusion
-The **Dropout Model** emerged as the best performer, achieving the highest accuracy (68.0%) and lowest loss (0.5959). The addition of dropout layers helped reduce overfitting, allowing the model to generalize the data better. The RMSprop optimizer also contributed positively to performance. In contrast, the Vanilla Model struggled due to overfitting, while models with regularization did not consistently outperform the dropout model. 
+The **RMSprop Model** emerged as the best performer, achieving the highest accuracy (69.5%) and lowest loss (0.596). The addition of dropout layers helped reduce overfitting, allowing the model to generalize the data better. The RMSprop optimizer also contributed positively to performance. In contrast, the Vanilla Model struggled due to overfitting, while models with regularization did not outperform other models. 
