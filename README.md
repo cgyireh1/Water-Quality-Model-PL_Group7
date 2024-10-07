@@ -33,13 +33,59 @@ print(df.head())
 - The dataset was split into feature matrix (X) and target variable (Y).
 - Features were scaled using StandardScaler to standardize the input data.
 
+ ### Handling the missing data
+
+```python
+# Handling missing data
+
+df['ph'] = df['ph'].fillna(df['ph'].mean())
+df['Sulfate'] = df['Sulfate'].fillna(df['Sulfate'].mean())
+df['Trihalomethanes'] = df['Trihalomethanes'].fillna(df['Trihalomethanes'].mean())
+
+```
+
 ### Data Splitting
 - The dataset was divided into training (80%) and testing (20%) sets.
+
+  ```python
+
+    
+from sklearn.model_selection import train_test_split
+
+# Features (X) and target variable (y)
+X = df_scaled[columns_to_scale]
+y = df['Potability']
+
+# Split the dataset into 80% training and 20% testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Output the shapes of the training and testing sets
+print(f"X_train shape: {X_train.shape}")
+print(f"X_test shape: {X_test.shape}")
+print(f"y_train shape: {y_train.shape}")
+print(f"y_test shape: {y_test.shape}")
+  
+  ```
 
 ### Model Architecture
 - A neural network was constructed using Keras.
 - Three variations of the model were created:
   1. Vanilla Model with no regularization
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.optimizers import Adam
+
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(16, activation='relu'))
+model.add(Dense(8, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+```
   2. L1 Regularization Model
   3. L2 Regularization Model
 
