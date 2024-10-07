@@ -47,25 +47,24 @@ df['Trihalomethanes'] = df['Trihalomethanes'].fillna(df['Trihalomethanes'].mean(
 ### Data Splitting
 - The dataset was divided into training (80%) and testing (20%) sets.
 
-  ```python
-
+```python
     
-from sklearn.model_selection import train_test_split
-
-# Features (X) and target variable (y)
-X = df_scaled[columns_to_scale]
-y = df['Potability']
-
-# Split the dataset into 80% training and 20% testing
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Output the shapes of the training and testing sets
-print(f"X_train shape: {X_train.shape}")
-print(f"X_test shape: {X_test.shape}")
-print(f"y_train shape: {y_train.shape}")
-print(f"y_test shape: {y_test.shape}")
+    from sklearn.model_selection import train_test_split
+    
+    # Features (X) and target variable (y)
+    X = df_scaled[columns_to_scale]
+    y = df['Potability']
+    
+    # Split the dataset into 80% training and 20% testing
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    # Output the shapes of the training and testing sets
+    print(f"X_train shape: {X_train.shape}")
+    print(f"X_test shape: {X_test.shape}")
+    print(f"y_train shape: {y_train.shape}")
+    print(f"y_test shape: {y_test.shape}")
   
-  ```
+```
 
 ### Model Architecture
 - A neural network was constructed using Keras.
@@ -73,18 +72,18 @@ print(f"y_test shape: {y_test.shape}")
   1. Vanilla Model with no regularization
 
 ```python
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Activation
-from tensorflow.keras.optimizers import Adam
-
-model = Sequential()
-model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
-model.add(Dense(32, activation='relu'))
-model.add(Dense(16, activation='relu'))
-model.add(Dense(8, activation='relu'))
-model.add(Dense(1, activation='sigmoid'))
+    import tensorflow as tf
+    from tensorflow import keras
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense, Dropout, Activation
+    from tensorflow.keras.optimizers import Adam
+    
+    model = Sequential()
+    model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(16, activation='relu'))
+    model.add(Dense(8, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))
 ```
   2. L1 Regularization Model
   3. L2 Regularization Model
@@ -107,17 +106,17 @@ model.add(Dense(1, activation='sigmoid'))
 The models exhibited varying degrees of performance. The Vanilla Model demonstrated signs of overfitting, with a high loss value (9.43) and moderate accuracy (60.4%). The introduction of L1 regularization improved performance slightly, but the model still struggled to generalize effectively. The Dropout Model showed significant improvements in both accuracy (68.0%) and loss (0.5959), indicating better generalization capabilities. However, models with L1 and L2 regularization presented mixed results, with L1 regularization not enhancing performance as expected when paired with RMSprop.
 
 ## Accuracy Comparison
-- **Vanilla Model**: 60.4%
+- **Vanilla Model**: 64.4%
 - **L1 Regularization Model**: 62.8%
-- **Dropout Model**: 68.0%
-- **RMSprop Model**: 67.8%
+- **Dropout Model**: 67.0%
+- **RMSprop Model**: 69.8%
 - **L1 Regularization with RMSprop**: 62.8%
 - **L2 Regularization with Dropout**: 62.8%
 
 The Dropout Model achieved the highest accuracy, closely followed by the RMSprop Model, suggesting that both dropout layers and the RMSprop optimizer help improve model performance significantly.
 
 ## Loss Comparison
-- **Vanilla Model**: 9.43
+- **Vanilla Model**: 5.57
 - **L1 Regularization Model**: 0.6611
 - **Dropout Model**: 0.5959
 - **RMSprop Model**: 0.5979
