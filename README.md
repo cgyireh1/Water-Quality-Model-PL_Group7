@@ -88,8 +88,12 @@ df['Trihalomethanes'] = df['Trihalomethanes'].fillna(df['Trihalomethanes'].mean(
 
 ![Screenshot from 2024-10-07 11-53-39](https://github.com/user-attachments/assets/92a8ee38-3b17-491d-b51f-ae5918186277)
 
-  2. L1 Regularization Model
-  3. L2 Regularization Model
+  2. L1 Regularization Model and Adam
+     ![Screenshot from 2024-10-07 11-57-24](https://github.com/user-attachments/assets/eaa930c8-292f-4250-bfdd-bdadcd9a4ede)
+  4. Plain Model with RMSprop
+    ![Screenshot from 2024-10-07 11-54-26](https://github.com/user-attachments/assets/a6c4f8e3-51e3-4d89-8429-b01a4652b811)
+  5. L2 Regularization Model with Dropout
+     ![Screenshot from 2024-10-07 11-58-01](https://github.com/user-attachments/assets/92987c8b-09b3-4cc1-8220-2400f282e038)
 
 ### Regularization Techniques
 - L1 and L2 regularization were implemented in their respective models to prevent overfitting.
