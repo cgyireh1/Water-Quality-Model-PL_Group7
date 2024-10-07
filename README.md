@@ -85,6 +85,9 @@ df['Trihalomethanes'] = df['Trihalomethanes'].fillna(df['Trihalomethanes'].mean(
     model.add(Dense(8, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 ```
+
+![Screenshot from 2024-10-07 11-53-39](https://github.com/user-attachments/assets/92a8ee38-3b17-491d-b51f-ae5918186277)
+
   2. L1 Regularization Model
   3. L2 Regularization Model
 
