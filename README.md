@@ -14,6 +14,21 @@
 - The water quality dataset was loaded using the Pandas library.
 - Missing values were handled by filling them with the mean of the respective columns.
 
+```python
+
+from sklearn.datasets import make_moons
+from matplotlib import pyplot
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+path = "/content/water_potability.csv"
+
+df = pd.read_csv(path)
+
+print(df.shape)
+print(df.head())
+  
+```
+
 ### Data Preprocessing
 - The dataset was split into feature matrix (X) and target variable (Y).
 - Features were scaled using StandardScaler to standardize the input data.
